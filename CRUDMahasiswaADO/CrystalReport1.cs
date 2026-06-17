@@ -1,17 +1,19 @@
 ﻿
     
-    
-    public class CrystalReport1 : ReportClass {
+    [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
+    public class CachedCrystalReport1 : Component, ICachedReport {
         
-        public CrystalReport1() {
+        public CachedCrystalReport1() {
         }
         
-        public override string ResourceName {
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public virtual bool IsCacheable {
             get {
-                return "CrystalReport1.rpt";
+                return true;
             }
             set {
-                // Do nothing
+                // 
             }
         }
         
