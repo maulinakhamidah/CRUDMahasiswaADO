@@ -1,23 +1,23 @@
 ﻿
 
-        public void resetData()
+        public void InsertLog(string message)
         {
             if (conn.State == ConnectionState.Closed) conn.Open();
-            string deleteQuery = "DELETE FROM mahasiswa;";
-            SqlCommand cmdDelete = new SqlCommand(deleteQuery, conn);
-            cmdDelete.ExecuteNonQuery();
-
-            string insertQuery = "INSERT INTO mahasiswa SELECT * FROM mahasiswa_backup;";
-            SqlCommand cmdInsert = new SqlCommand(insertQuery, conn);
-            cmdInsert.ExecuteNonQuery();
-        }
-
-        public void testInject(string nim)
-        {
-            if (conn.State == ConnectionState.Closed) conn.Open();
-            string query = "Update mahasiswa set nama = 'HACKED' where NIM = " + nim;
-            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlCommand cmd = new SqlCommand("sp_LogMessage", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("psn", message);
             cmd.ExecuteNonQuery();
         }
 
-       
+        public DataTable getProdi()
+        {
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            SqlCommand cmd = new SqlCommand("select namaprodi from prodi", conn);
+            cmd.CommandType = CommandType.Text;
+            dtProdi = new DataTable();
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dtProdi);
+            return dtProdi;
+        }
+
+     
