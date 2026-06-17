@@ -1,23 +1,39 @@
 ﻿
 
-        public void InsertLog(string message)
+        public DataTable getDataRekap(string prodi, DateTime tanggalMasuk)
         {
             if (conn.State == ConnectionState.Closed) conn.Open();
-            SqlCommand cmd = new SqlCommand("sp_LogMessage", conn);
+            SqlCommand cmd = new SqlCommand("sp_Report", conn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("psn", message);
-            cmd.ExecuteNonQuery();
+            cmd.Parameters.AddWithValue("@inProdi", prodi);
+            cmd.Parameters.AddWithValue("@intglMsuk", tanggalMasuk.Year.ToString());
+            da = new SqlDataAdapter(cmd);
+            dtMahasiswa = new DataTable();
+            da.Fill(dtMahasiswa);
+            return dtMahasiswa;
         }
 
-        public DataTable getProdi()
+        public DataTable getAllDataChart()
         {
             if (conn.State == ConnectionState.Closed) conn.Open();
-            SqlCommand cmd = new SqlCommand("select namaprodi from prodi", conn);
-            cmd.CommandType = CommandType.Text;
-            dtProdi = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_Dashboard", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             da = new SqlDataAdapter(cmd);
-            da.Fill(dtProdi);
-            return dtProdi;
+            dtMahasiswa = new DataTable();
+            da.Fill(dtMahasiswa);
+            return dtMahasiswa;
         }
 
-     
+        public DataTable getDataChartByTahun(DateTime thMasuk)
+        {
+            if (conn.State == ConnectionState.Closed) conn.Open();
+            SqlCommand cmd = new SqlCommand("sp_DashboardByTahun", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@inTglMsuk", thMasuk.Year);
+            da = new SqlDataAdapter(cmd);
+            dtMahasiswa = new DataTable();
+            da.Fill(dtMahasiswa);
+            return dtMahasiswa;
+        }
+    }
+}
