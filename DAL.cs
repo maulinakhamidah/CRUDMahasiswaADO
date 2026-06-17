@@ -24,6 +24,7 @@ namespace CRUDMahasiswaaADO
         }
 
         public DataTable GetMhs()
+
         {
             if (conn.State == ConnectionState.Closed) conn.Open();
             SqlCommand cmd = new SqlCommand("sp_GetMahasiswa", conn);
