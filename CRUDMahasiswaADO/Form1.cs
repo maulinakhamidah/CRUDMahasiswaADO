@@ -1,26 +1,27 @@
 ﻿
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnResetData_Click(object sender, EventArgs e)
         {
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("sp_DeleteMahasiswa", conn))
+                    conn.Open();
+                    string query = @"
+                        IF OBJECT_ID('dbo.Mahasiswa_Backup') IS NOT NULL
+                        BEGIN
+                            DELETE FROM dbo.Mahasiswa;
+                            INSERT INTO dbo.Mahasiswa
+                            SELECT * FROM dbo.Mahasiswa_Backup;
+                        END";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("@NIM", SqlDbType.Char, 11).Value = txtNIM.Text;
-
-                        conn.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                            MessageBox.Show("Data mahasiswa berhasil dihapus");
-                        else
-                            MessageBox.Show("Data mahasiswa tidak ditemukan");
+                        cmd.ExecuteNonQuery();
                     }
-                    LoadData();
                 }
+                MessageBox.Show("Data mahasiswa berhasil direset");
+                LoadData();
             }
             catch (Exception ex)
             {
