@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="DAL.cs" />
+  </Folder>
+  <Project Path="CRUDMahasiswaADO/CRUDMahasiswaADO.csproj" Id="50ba800b-6e9f-49c5-a8ca-5bf1e824e705" />
+</Solution>
