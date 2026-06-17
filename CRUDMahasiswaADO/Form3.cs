@@ -1,26 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-
-namespace CRUDMahasiswaADO
-{
-    public partial class Form3 : Form
-    {
-        private static string connectionString = @"Data Source=LAPTOP-66MU6CLK\MAULINAA;Initial Catalog=DBAkademikADO;Integrated Security=True";
-        private SqlConnection conn;
-        private SqlDataAdapter da;
-        private DataTable dtMahasiswa;
-        private CrystalReport1 listMahasiswa = new CrystalReport1();
-
-        string prodi { get; set; }
-        DateTime tglmasuk { get; set; }
+﻿
 
         public Form3(string Prodi, DateTime TglMasuk)
         {
@@ -58,14 +36,4 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void crystalReportViewer2_Load(object sender, EventArgs e)
-        {
-
-        }
-    }
-}
+   
