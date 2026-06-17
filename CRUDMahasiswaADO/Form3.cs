@@ -1,15 +1,4 @@
 ﻿
-
-        public Form3(string Prodi, DateTime TglMasuk)
-        {
-            InitializeComponent();
-            conn = new SqlConnection(connectionString);
-
-            prodi = Prodi;
-            tglmasuk = TglMasuk;
-
-            crystalReportViewer2.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
-
             try
             {
                 if (conn.State == ConnectionState.Closed)
@@ -36,4 +25,4 @@
             }
         }
 
-   
+    
