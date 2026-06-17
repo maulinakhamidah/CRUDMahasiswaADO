@@ -1,20 +1,14 @@
 ﻿
-    
-    [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
-        
-        public CachedCrystalReport1() {
-        }
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public virtual bool IsCacheable {
+        public virtual System.TimeSpan CacheTimeOut {
             get {
-                return true;
+                return CachedReportConstants.DEFAULT_TIMEOUT;
             }
             set {
                 // 
             }
         }
         
-       
+    
