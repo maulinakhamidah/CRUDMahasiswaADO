@@ -1,4 +1,4 @@
-﻿namespace CRUDMahasiswaaADO
+namespace CRUDMahasiswaADO
 {
     partial class Dashboard
     {
@@ -31,107 +31,127 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            this.chartProdi = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dtpTanggalMasuk = new System.Windows.Forms.DateTimePicker();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnDatamahasiswa = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbTipe = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.chartProdi)).BeginInit();
             this.SuspendLayout();
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(380, 113);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 28);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Load";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(730, 558);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(152, 34);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Data Mahasiswa";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(761, 105);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Tahun Masuk";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(276, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(332, 32);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Rekap Data Mahasiswa";
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(461, 113);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 28);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Reset";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // chart2
+            // chartProdi
             // 
             chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            this.chartProdi.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(37, 164);
-            this.chart2.Name = "chart2";
+            this.chartProdi.Legends.Add(legend2);
+            this.chartProdi.Location = new System.Drawing.Point(41, 154);
+            this.chartProdi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chartProdi.Name = "chartProdi";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(787, 377);
-            this.chart2.TabIndex = 7;
-            this.chart2.Text = "chart2";
+            this.chartProdi.Series.Add(series2);
+            this.chartProdi.Size = new System.Drawing.Size(796, 344);
+            this.chartProdi.TabIndex = 0;
+            this.chartProdi.Text = "chart1";
             // 
-            // dateTimePicker2
+            // dtpTanggalMasuk
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(144, 112);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker2.TabIndex = 8;
+            this.dtpTanggalMasuk.Location = new System.Drawing.Point(143, 96);
+            this.dtpTanggalMasuk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpTanggalMasuk.Name = "dtpTanggalMasuk";
+            this.dtpTanggalMasuk.Size = new System.Drawing.Size(239, 26);
+            this.dtpTanggalMasuk.TabIndex = 1;
             // 
-            // Dashboard
+            // btnLoad
             // 
-            this.ClientSize = new System.Drawing.Size(907, 604);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.chart2);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Name = "Dashboard";
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            this.btnLoad.BackColor = System.Drawing.Color.Plum;
+            this.btnLoad.Location = new System.Drawing.Point(413, 97);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(84, 29);
+            this.btnLoad.TabIndex = 2;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = false;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnReset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnReset.Location = new System.Drawing.Point(503, 97);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(84, 29);
+            this.btnReset.TabIndex = 3;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnDatamahasiswa
+            // 
+            this.btnDatamahasiswa.Location = new System.Drawing.Point(711, 506);
+            this.btnDatamahasiswa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDatamahasiswa.Name = "btnDatamahasiswa";
+            this.btnDatamahasiswa.Size = new System.Drawing.Size(154, 29);
+            this.btnDatamahasiswa.TabIndex = 4;
+            this.btnDatamahasiswa.Text = "Data Mahasiswa";
+            this.btnDatamahasiswa.UseVisualStyleBackColor = true;
+            this.btnDatamahasiswa.Click += new System.EventHandler(this.btnDatamahasiswa_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(230, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(397, 37);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "REKAP DATA MAHASISWA";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Tanggal Masuk";
+            // 
+            // cmbTipe
+            // 
+            this.cmbTipe.FormattingEnabled = true;
+            this.cmbTipe.Location = new System.Drawing.Point(729, 98);
+            this.cmbTipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbTipe.Name = "cmbTipe";
+            this.cmbTipe.Size = new System.Drawing.Size(136, 28);
+            this.cmbTipe.TabIndex = 7;
+            this.cmbTipe.SelectedValueChanged += new System.EventHandler(this.cmbTipe_SelectedValueChanged);
+            // 
+            // FormDashboard
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(881, 560);
+            this.Controls.Add(this.cmbTipe);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnDatamahasiswa);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.dtpTanggalMasuk);
+            this.Controls.Add(this.chartProdi);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FormDashboard";
+            this.Text = "FormDashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chartProdi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,21 +159,13 @@
 
         #endregion
 
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartProdi;
+        private System.Windows.Forms.DateTimePicker dtpTanggalMasuk;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnDatamahasiswa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox cmbTipe;
     }
 }

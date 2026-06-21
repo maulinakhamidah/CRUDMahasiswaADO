@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
@@ -15,6 +15,12 @@ namespace CRUDMahasiswaADO
 
         string prodi { get; set; }
         DateTime tglmasuk { get; set; }
+
+        public RekapMahasiswa()
+        {
+            InitializeComponent();
+            conn = new SqlConnection(connectionString);
+        }
 
         public RekapMahasiswa(string Prodi, DateTime TglMasuk)
         {

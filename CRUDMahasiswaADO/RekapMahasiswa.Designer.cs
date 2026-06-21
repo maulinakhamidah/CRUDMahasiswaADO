@@ -31,17 +31,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Wide Latin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(204, 23);
+            this.label1.BackColor = System.Drawing.Color.SeaShell;
+            this.label1.Font = new System.Drawing.Font("Lucida Bright", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(244, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(412, 24);
+            this.label1.Size = new System.Drawing.Size(324, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rekap Data Mahasiswa";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(102, 83);
+            this.label2.Location = new System.Drawing.Point(56, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 20);
             this.label2.TabIndex = 1;
@@ -50,7 +51,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(292, 83);
+            this.label3.Location = new System.Drawing.Point(257, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 20);
             this.label3.TabIndex = 2;
@@ -58,45 +59,47 @@
             // 
             // btnCetak
             // 
-            this.btnCetak.Location = new System.Drawing.Point(658, 406);
+            this.btnCetak.BackColor = System.Drawing.Color.LightPink;
+            this.btnCetak.Location = new System.Drawing.Point(658, 417);
             this.btnCetak.Name = "btnCetak";
-            this.btnCetak.Size = new System.Drawing.Size(92, 35);
+            this.btnCetak.Size = new System.Drawing.Size(92, 42);
             this.btnCetak.TabIndex = 7;
             this.btnCetak.Text = "Cetak";
-            this.btnCetak.UseVisualStyleBackColor = true;
+            this.btnCetak.UseVisualStyleBackColor = false;
             this.btnCetak.Click += new System.EventHandler(this.btnCetak_Click);
             // 
             // btnCari
             // 
-            this.btnCari.Location = new System.Drawing.Point(645, 74);
+            this.btnCari.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnCari.Location = new System.Drawing.Point(658, 78);
             this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(88, 44);
+            this.btnCari.Size = new System.Drawing.Size(88, 37);
             this.btnCari.TabIndex = 4;
             this.btnCari.Text = "Cari";
-            this.btnCari.UseVisualStyleBackColor = true;
+            this.btnCari.UseVisualStyleBackColor = false;
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // dtpTanggalMasuk
             // 
-            this.dtpTanggalMasuk.Location = new System.Drawing.Point(403, 81);
+            this.dtpTanggalMasuk.Location = new System.Drawing.Point(368, 84);
             this.dtpTanggalMasuk.Name = "dtpTanggalMasuk";
-            this.dtpTanggalMasuk.Size = new System.Drawing.Size(213, 26);
+            this.dtpTanggalMasuk.Size = new System.Drawing.Size(237, 26);
             this.dtpTanggalMasuk.TabIndex = 6;
             // 
             // dgvMahasiswa
             // 
             this.dgvMahasiswa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMahasiswa.Location = new System.Drawing.Point(102, 131);
+            this.dgvMahasiswa.Location = new System.Drawing.Point(12, 131);
             this.dgvMahasiswa.Name = "dgvMahasiswa";
             this.dgvMahasiswa.RowHeadersWidth = 62;
             this.dgvMahasiswa.RowTemplate.Height = 28;
-            this.dgvMahasiswa.Size = new System.Drawing.Size(631, 269);
+            this.dgvMahasiswa.Size = new System.Drawing.Size(766, 280);
             this.dgvMahasiswa.TabIndex = 8;
             // 
             // cmbProdi
             // 
             this.cmbProdi.FormattingEnabled = true;
-            this.cmbProdi.Location = new System.Drawing.Point(153, 81);
+            this.cmbProdi.Location = new System.Drawing.Point(107, 84);
             this.cmbProdi.Name = "cmbProdi";
             this.cmbProdi.Size = new System.Drawing.Size(133, 28);
             this.cmbProdi.TabIndex = 0;
@@ -106,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 461);
             this.Controls.Add(this.cmbProdi);
             this.Controls.Add(this.dgvMahasiswa);
             this.Controls.Add(this.btnCetak);
